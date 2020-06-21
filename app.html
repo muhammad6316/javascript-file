@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters 1-38</title>
+    <script src="app.js"></script>
+
+</head>
+<body>
+
+<script>
+    alert("Happy Coding!")
+</script>
+
+                                            <!-- chapter 21-25-->
+
+                                            <!--String Method -->
+     <!-- Q2: -->
+     <p>Click the button to return the number of characters in the string you enter.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var mobilemodel = prompt("what is your favourite mobile model");
+  var l = mobilemodel.length;
+  alert("your favourite mobile model length is " + l)
+}
+</script>
+
+<!-- Q3: -->
+<p>Click the button to check the index of letter 'n' in word "Pakistani" .</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "pakistani";
+  var n = str.indexOf("n");
+  alert("index of letter n is " + n)
+}
+</script>
+
+<!-- Q4: -->
+<p>Click the button to locate the last occurrence of a specified value.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Hello world.";
+  var n = str.lastIndexOf("l");
+  document.getElementById("demo").innerHTML = "last index of l is " + n;
+}
+</script>
+
+<!-- Q5: -->
+<p>Click the button to display the third character of the string "Pakistani".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Pakistani";
+  var c = str.charAt(3)
+  document.getElementById("demo").innerHTML = "character of 3rd index is : " + c;
+}
+</script>
+
+<!-- Q6: -->
+<p>Click the button to join two strings into one new string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var firstname = window.prompt("Enter your first name ? ");
+  var lastname = window.prompt("last name ? ");
+  var res = firstname.concat(lastname);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+<!-- Q7: -->
+<p>Click the button to replace "Heydr" with "Islam"</p>
+
+<p id="demo"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var str = "Heydrabad"; 
+  var replace = str.replace("Heydr", "Islam");
+  document.getElementById("demo").innerHTML = "After replacement " + replace;
+}
+</script>
+
+<!-- Q8: -->
+<p>Click the button to replace "and" with "&" in the paragraph below:</p>
+
+<p id="demo">Ali and Sami are best friends. They play cricket and 
+football together.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var replace = str.replace(/and/g, "&");
+  document.getElementById("demo").innerHTML = replace;
+}
+</script>
+
+<!-- Q10: -->
+<p>Click the button to convert the string to uppercase letters.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "peanuts";
+  var res = str.toUpperCase();
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+<!-- Q12: -->
+<p>Click the button to display the formatted number.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var d = 109.65;
+var s = d + '';
+s =s.replace('.', '');
+s = parseInt(s);
+document.getElementById("demo").innerHTML = s;
+}
+</script>
+
+<!-- Q17: -->
+<p>Click the button to display the last character of the string "Pakistan".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Pakistan";
+  var replace = str.charAt(str.length-1); 
+  document.getElementById("demo").innerHTML = replace
+}
+</script>
+                                                <!-- variables in strings -->
+<script>
+    var messege = "Hello World";
+    alert(messege);
+</script>
+<script>
+    var name = "Jhone Doe";
+    var  age = "15 years old";
+    var qual = "Certified Mobile Application Development";
+    alert(name)
+    alert(age)
+    alert(qual) 
+</script>
+<h1><b> Rules for naming JS variables</b> </h1><br> <br>
+<p>Variable names can only contain letters, numbers, $ sign and underscores.For example $my_1stVariable. <br> <br>
+    Variables must begin with a name, numbers ounderscore. For example $name, _name or name. <br><br>
+    Variable names are case sensitive.  <br><br>
+    Variable names should not be JS keyword.</p>
+    <script>
+        var num = 600;
+        var cost = num * 5;
+        alert (cost)
+        document.write("The total cost to buy 5 tickets to a movie is" + cost + "PKR")
+    
+    </script>
+    <script>
+        var usdoller = 10;
+        var saudiriyal = 25;
+        // 1 US doller is = 104.80 pkr and 1 Saudi Riyal = 28 pkr
+        var pkr = (104.80*10) + (25*28)
+        alert(pkr)
+        document.write("Currency in PKR <br> Total currency in PKR:" + pkr)
+
+    </script>
+    <form id="myForm">
+        <select id="selectNow">
+           <option>Apple</option>
+           <option>Samsung</option>
+           <option>Nokia</option>
+           <option>Motorola</option>
+           <option>Sony</option>
+           <option>Haier</option>
+        </select>
+        <input type="button" onclick="display()" value="Click">
+    </form>
+     <p>Select and click the button</p>
+     <script>
+        function display() {
+           var obj = document.getElementById("selectNow");
+           document.write(obj.options[obj.selectedIndex].text);
+        }
+     </script>
+                                          
+
+</body>
+</html>
+    
